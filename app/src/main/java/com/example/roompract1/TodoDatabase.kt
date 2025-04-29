@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
 //step 3: todo database
 //tododatabase.kt roomdatabase class
 
-@Database(entities = [Todo::class], version = 1)
+@Database(entities = [Todo::class], version = 2)
 abstract class TodoDatabase : RoomDatabase() {
 
     abstract fun todoDao(): TodoDao

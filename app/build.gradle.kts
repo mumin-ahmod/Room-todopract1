@@ -65,5 +65,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
 
 
+    implementation("com.guolindev.permissionx:permissionx:1.7.1")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    ksp("com.github.bumptech.glide:compiler:4.16.0")
+
 
 }

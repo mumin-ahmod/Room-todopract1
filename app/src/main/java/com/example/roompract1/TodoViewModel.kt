@@ -41,14 +41,14 @@ class TodoViewModel (private val repository: TodoRepository) : ViewModel() {
         }
     }
 
-    fun addTodo(title: String, description: String) {
+    fun addTodo(title: String, description: String,  imagePath: String? = null) {
         if (title.isBlank()) {
             _uiState.value = UiState.Error("Title cannot be empty")
             return
         }
 
         viewModelScope.launch {
-            val todo = Todo(title = title, description = description)
+            val todo = Todo(title = title, description = description, imagePath = imagePath)
             repository.insert(todo)
             _uiState.value = UiState.Success
         }
